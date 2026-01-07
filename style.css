@@ -1,0 +1,56 @@
+:root {
+    --bg-light: #fdfdfd;
+    --text-main: #334155;
+    --text-light: #64748b;
+    --accent-rose: #f4dada;
+    --accent-sage: #d5e2d4;
+    --accent-lavender: #e2e0ff;
+    --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Fondo con círculos desenfocados y suaves */
+#bg-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at top right, #fdf2f8, transparent),
+                radial-gradient(circle at bottom left, #f0fdf4, transparent);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.4;
+    z-index: -1;
+    animation: float 10s infinite ease-in-out;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.1); }
+}
+
+/* Estilo de botones minimalistas */
+.btn-minimal {
+    background: white;
+    border: 1px solid #f1f5f9;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.btn-minimal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -10px rgba(0,0,0,0.1);
+    border-color: var(--accent-rose);
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bianca Principi | Portafolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+    <div class="fixed top-6 left-6 z-[100]">
+        <a href="index.html" 
+        class="w-12 h-12 bg-white/80 backdrop-blur-md border border-slate-100 rounded-xl flex items-center justify-center text-slate-400 hover:text-rose-300 hover:shadow-lg transition-all duration-300"
+        title="Volver al inicio">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto relative z-10">
+        <a href="index.html" class="text-slate-800 font-semibold text-lg tracking-tight hover:opacity-70 transition">BIANCA PRINCIPI</a>
+        <div class="hidden md:flex gap-8 text-sm font-medium text-slate-500">
+            <a href="#sobre-mi" class="hover:text-slate-800 transition">Sobre mí</a>
+            <a href="#proyectos" class="hover:text-slate-800 transition">Proyectos</a>
+            <button onclick="openModal()" class="text-rose-400 font-semibold">Contacto</button>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 space-y-32 py-12 relative z-10">
+        
+        <section class="flex flex-col md:flex-row items-center gap-16 py-10">
+            <div class="flex-1 space-y-8 text-center md:text-left">
+                <h1 class="text-5xl md:text-6xl font-light text-slate-800 leading-tight">
+                    Creando soluciones <br>
+                    <span class="font-semibold italic text-rose-300">con propósito.</span>
+                </h1>
+                <p class="text-lg text-slate-500 max-w-md mx-auto md:mx-0">
+                    Desarrolladora Fullstack enfocada en interfaces limpias y arquitecturas eficientes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button onclick="openModal()" class="btn-minimal px-8 py-3 rounded-full text-slate-700 font-medium">Hablemos</button>
+                    <a href="#proyectos" class="px-8 py-3 text-slate-400 hover:text-slate-800 transition text-sm flex items-center justify-center gap-2">
+                        Ver trabajos <i class="fas fa-arrow-down text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex-1 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-rose-50 rounded-full blur-2xl opacity-50 group-hover:opacity-80 transition duration-500"></div>
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-sm">
+                        <img src="perfil.jpeg" alt="Bianca" class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white/50 backdrop-blur-md p-10 rounded-[40px] border border-white shadow-sm">
+                <h2 class="text-2xl font-semibold text-slate-800 mb-6">Un poco sobre mí</h2>
+                <p class="text-slate-500 leading-relaxed">
+                    Estudiante de Desarrollo de Software en **ITEC Río Cuarto**. Me apasiona el equilibrio entre el código bien estructurado y una estética visual que sea agradable para el usuario. <br><br>
+                    Mi enfoque actual es profundizar en el ecosistema de Python para backend y React para interfaces modernas.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="p-6 bg-rose-50/50 rounded-3xl border border-rose-100 text-center">
+                    <span class="block text-2xl font-bold text-rose-300">+10</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Proyectos</span>
+                </div>
+                <div class="p-6 bg-emerald-50/50 rounded-3xl border border-emerald-100 text-center">
+                    <span class="block text-2xl font-bold text-emerald-300">ITEC</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest">Formación</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="space-y-12">
+            <h2 class="text-center text-slate-400 text-xs font-bold uppercase tracking-[0.3em]">Tecnologías</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="btn-minimal p-8 rounded-[32px] text-center space-y-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-700">Frontend</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">React, Vite, Tailwind CSS y animaciones fluidas.</p>
+                </div>
+
+                <div class="btn-minimal p-8 rounded-[32px] text-center space-y-4">
+                    <div class="w-12 h-12 bg-rose-50 text-rose-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-700">Backend</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Python, Django y diseño de bases de datos SQL.</p>
+                </div>
+
+                <div class="btn-minimal p-8 rounded-[32px] text-center space-y-4">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-300 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="font-semibold text-slate-700">DevOps</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">Git, GitHub y despliegue de aplicaciones web.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="space-y-16">
+            <div class="text-center space-y-4">
+                <h2 class="text-3xl font-semibold text-slate-800">Proyectos Destacados</h2>
+                <div class="w-12 h-1 bg-rose-200 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group relative bg-white rounded-[40px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-64 bg-slate-50 flex items-center justify-center group-hover:bg-rose-50 transition-colors">
+                        <i class="fas fa-plane text-5xl text-slate-200 group-hover:text-rose-200 transition-colors"></i>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <span class="text-[10px] font-bold text-rose-300 uppercase tracking-widest bg-rose-50 px-3 py-1 rounded-full">Fullstack</span>
+                        <h3 class="text-xl font-bold text-slate-800">Anbi Airlines</h3>
+                        <p class="text-slate-500 text-sm">Sistema de gestión de vuelos y tickets desarrollado con Django y React.</p>
+                        <a href="#" class="inline-block text-slate-800 font-semibold text-sm border-b border-rose-200 pb-1 hover:border-rose-400 transition">Explorar proyecto</a>
+                    </div>
+                </div>
+
+                <div class="group relative bg-white rounded-[40px] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-64 bg-slate-50 flex items-center justify-center group-hover:bg-emerald-50 transition-colors">
+                        <i class="fas fa-leaf text-5xl text-slate-200 group-hover:text-emerald-200 transition-colors"></i>
+                    </div>
+                    <div class="p-8 space-y-4">
+                        <span class="text-[10px] font-bold text-emerald-300 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Frontend</span>
+                        <h3 class="text-xl font-bold text-slate-800">Sitio Institucional</h3>
+                        <p class="text-slate-500 text-sm">Diseño minimalista con enfoque en accesibilidad y experiencia de usuario.</p>
+                        <a href="#" class="inline-block text-slate-800 font-semibold text-sm border-b border-emerald-200 pb-1 hover:border-emerald-400 transition">Explorar proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-slate-900/10 backdrop-blur-md">
+        <div class="bg-white border border-slate-100 rounded-[40px] w-[90%] max-w-lg p-10 shadow-2xl">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-2xl font-semibold text-slate-800 italic">Hola, Bianca <span class="text-rose-200">!</span></h3>
+                <button onclick="closeModal()" class="text-slate-300 hover:text-slate-800 transition"><i class="fas fa-times"></i></button>
+            </div>
+            <form action="https://formspree.io/f/mlgrwddl" method="POST" class="space-y-6">
+                <input type="text" name="name" placeholder="¿Cómo te llamás?" required class="w-full bg-slate-50/50 border-none p-4 rounded-2xl text-slate-800 placeholder:text-slate-300 outline-none focus:ring-2 focus:ring-rose-100 transition">
+                
+                <input type="email" name="email" placeholder="Tu email" required class="w-full bg-slate-50/50 border-none p-4 rounded-2xl text-slate-800 placeholder:text-slate-300 outline-none focus:ring-2 focus:ring-rose-100 transition">
+                
+                <textarea name="message" placeholder="¿En qué puedo ayudarte?" rows="4" required class="w-full bg-slate-50/50 border-none p-4 rounded-2xl text-slate-800 placeholder:text-slate-300 outline-none focus:ring-2 focus:ring-rose-100 transition"></textarea>
+                
+                <button type="submit" class="w-full bg-slate-800 text-white py-4 rounded-2xl font-medium hover:bg-slate-700 transition">
+                    Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="py-20 text-center space-y-6 relative z-10">
+        <div class="flex justify-center gap-8">
+            <a href="#" class="text-slate-300 hover:text-rose-300 transition text-xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-slate-300 hover:text-blue-300 transition text-xl"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-[0.5em]">&copy; 2026 BIANCA PRINCIPI</p>
+    </footer>
+
+    <script src="background.js"></script>
+    <script>
+        function openModal() { document.getElementById('contactModal').classList.replace('hidden', 'flex'); }
+        function closeModal() { document.getElementById('contactModal').classList.replace('flex', 'hidden'); }
+    </script>
+</body>
+</html>
